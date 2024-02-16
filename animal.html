@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Animal Game </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <h1>Animal Game by SriNihitha</h1>
+    </header>
+    <form>
+        <label for="form1_hidden">The hidden animal type</label>
+        <input type="password" id="form1_hidden" name="form1_hidden" value="Chicken"> <br>
+
+        <label for="form1_guess">Guess the animal </label>
+        <input type="text" id="form1_guess" name="form1_guess" autofocus> <br>
+
+        <input type="button" class="btn btn-info" onclick="checkAnimal()" value="Check the guess">
+    </form>
+    <p id="result">Results will be shown here </p>
+    <br>
+
+    <script>
+        let correct = 0
+        let wrong = 0
+        function checkAnimal() {
+            console.log("Getting form values")
+            hidden = document.getElementById("form1_hidden").value
+            guess = document.getElementById("form1_guess").value
+            out = document.getElementById("result")
+            if (hidden == guess) {
+                correct++
+                out.innerHTML = "Correct/Wrong count : " + correct + "/" + wrong
+                alert("Ruff ruff")
+            } else {
+                wrong++
+                out.innerHTML = "Correct/Wrong count : " + correct + "/" + wrong
+                alert("Grrrr")
+            }
+        }
+    </script>
+</body>
+
+</html>
