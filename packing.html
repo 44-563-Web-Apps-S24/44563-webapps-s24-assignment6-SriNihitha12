@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Packing file</title>
+        <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" 
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js" 
+        integrity="sha384-mQ93GR66B00ZXjt0YO5KlohRA5SY2XofN4zfuZxLkoj1gXtW8ANNCe9d5Y3eG5eD" crossorigin="anonymous"></script>
+    </head>
+<body>
+<header>
+    <h2 style="text-align: center">SriNihitha packs for a trip</h2>
+</header>
+<br>
+<h2>Getting input</h2>
+
+<form>
+    <input type="checkbox" id="Pack light" name="ADD ON1" value="True">
+    <label for="cb1_Pack light">Pack light</label>
+</br>
+    <input type="checkbox" id="Carry on" name="ADD ON2" value="True">
+    <label for="cb1_Carry on">Carry on</label>
+</br>
+    <input type="checkbox" id="Tablet" name="ADD ON3" value="False">
+    <label for="cb1_Tablet">Tablet</label>
+</br>
+
+    <input type="button" class="btn btn-info" onclick="selectPack()" value="Select for packing">
+  </form>
+  <p id="result">Results will be shown here </p>
+  <script> 
+
+my_pack={};
+    function selectPack(){
+        my_pack ={};
+        my_pack.Packlight=document.getElementById("Pack light").checked;
+        my_pack.Carryon=document.getElementById("Carry on").checked;
+        my_pack.Tablet=document.getElementById("Tablet").checked;
+        document.getElementById("result").innerHTML=JSON.stringify(my_pack);
+    }
+    function updateBox(){
+        my_pack.size=document.getElementById("size").value;
+        my_pack.price=document.getElementById("price").value;
+       document.getElementById("result1").innerHTML=JSON.stringify(my_pack);
+    }
+    </script>
+</body>
+</html> 
