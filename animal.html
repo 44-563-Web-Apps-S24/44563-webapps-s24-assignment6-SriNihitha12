@@ -32,6 +32,12 @@
     </form>
     <p id="result">Results will be shown here </p>
     <br>
+    <br>
+
+    <h3>Click on image</h3>
+    <div class="container">
+        <img src="AquaVelva.jpg" id="image" width="150" height="150" onclick="selectImage()">
+    </div>
 
     <script>
         let correct = 0
@@ -51,7 +57,27 @@
                 alert("Grrrr")
             }
         }
+        var useImage = 1
+        function selectImage() {
+            switch (useImage) {
+                case 1:
+                    document.getElementById("image").src ="AquaVelva.jpg";
+                    useImage++
+                    break
+                case 2:
+                    document.getElementById("image").src ="DalgonaCoffee.jpg";
+                    useImage++
+                    break
+                case 3:
+                    document.getElementById("image").src = "MangoChocolate.jpg";
+                    useImage = 1
+                    break
+                default:
+            }
+        }
     </script>
+               
+
 </body>
 
 </html>
