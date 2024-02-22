@@ -33,18 +33,29 @@
     <input type="button" class="btn btn-info" onclick="selectPack()" value="Select for packing">
   </form>
   <p id="result">Results will be shown here </p>
+
+  <div class="form-group">
+    <form>
+      <label for="Month">Enter travel month</label><input type ="text" id="May" value="May" name="May" autofocus> <br>
+      <label for="Price">Enter price</label><input type ="text" id="price" name="price" autofocus> <br>
+  
+      <input type="button" class="btn btn-warning" onclick="updatePack()()" value="Update the pack">
+  </form>
+  </div>
+  <p id="result1">Results will be shown here </p>
   <script> 
 
 my_pack={};
     function selectPack(){
         my_pack ={};
-        my_pack.Packlight=document.getElementById("Pack light").checked;
-        my_pack.Carryon=document.getElementById("Carry on").checked;
+        my_pack.light=document.getElementById("Pack light").checked;
+        my_pack.Carry=document.getElementById("Carry on").checked;
         my_pack.Tablet=document.getElementById("Tablet").checked;
         document.getElementById("result").innerHTML=JSON.stringify(my_pack);
     }
-    function updateBox(){
-        my_pack.size=document.getElementById("size").value;
+    function updatePack(){
+       
+        my_pack.month=document.getElementById("May").value;
         my_pack.price=document.getElementById("price").value;
        document.getElementById("result1").innerHTML=JSON.stringify(my_pack);
     }

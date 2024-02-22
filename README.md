@@ -2,3 +2,8 @@
 # WebApps-S24-Assignment-6
 Introduction to Java Script and DOM
 
+Hosted at:
+
+Animal Game : https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-SriNihitha12/animal.html
+Discount File : https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-SriNihitha12/disscount.html
+Packing File : https://44-563-web-apps-s24.github.io/44563-webapps-s24-assignment6-SriNihitha12/packing.html
